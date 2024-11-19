@@ -68,6 +68,10 @@ function Home() {
           <img src={Logo} alt="Logo" className="logo" />
           {!isScrolled && <span className="logo-text">HerbScan</span>}
         </div>
+        <div className="search-bar-container">
+          <input type="text" placeholder="Search..." className="search-bar" />
+          <i className="search-icon fas fa-search"></i>
+        </div>
         <nav className="nav-bar">
           <ul className="nav-links">
             <li><a href="/">Home</a></li>
@@ -85,13 +89,10 @@ function Home() {
         </nav>
       </header>
 
-      {/* First Parallax Section */}
+      {/* First Parallax Section
       <div className="parallax-section search-section">
-        <div className="search-bar-container">
-          <input type="text" placeholder="Search..." className="search-bar" />
-          <i className="search-icon fas fa-search"></i>
-        </div>
-      </div>
+        
+      </div> */}
 
       {/* Second Parallax Section */}
       <div className="parallax-section content-section">

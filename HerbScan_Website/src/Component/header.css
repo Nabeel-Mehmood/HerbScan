@@ -36,8 +36,8 @@
   }
   
   .logo-text {
-    margin-left: 20px; /* Space between logo and text */
-    font-size: 28px; /* Slightly larger font size */
+    margin-left: 10px; /* Space between logo and text */
+    font-size: 24px; /* Slightly larger font size */
     font-weight: bold;
     color: #4CAF50; /* Match the theme color */
     font-family: 'Poppins', sans-serif; /* Use a modern, stylish font */
@@ -87,7 +87,7 @@
     text-decoration: none;
     color: white;
     font-weight: 500;
-    font-size: 1.1rem;
+    font-size: 1.0rem;
     transition: color 0.3s ease, transform 0.3s ease;
   }
   
