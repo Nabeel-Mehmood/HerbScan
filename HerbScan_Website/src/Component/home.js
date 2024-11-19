@@ -9,14 +9,14 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import { Autoplay } from 'swiper/modules';
 import { register } from 'swiper/element';
-import Logo from 'C:\\Users\\Sparta Laptop Store\\Desktop\\Nabeel\\nabeel\\src\\Assets\\logo.png';
+import Logo from '../Assets/logo.png';
 
 // Images for the slider
-import image1 from 'C:\\Users\\Sparta Laptop Store\\Desktop\\Nabeel\\nabeel\\src\\Assets\\image1.jpg';
-import image2 from 'C:\\Users\\Sparta Laptop Store\\Desktop\\Nabeel\\nabeel\\src\\Assets\\image2.jpg';
-import image3 from 'C:\\Users\\Sparta Laptop Store\\Desktop\\Nabeel\\nabeel\\src\\Assets\\image3.jpg';
-import image4 from 'C:\\Users\\Sparta Laptop Store\\Desktop\\Nabeel\\nabeel\\src\\Assets\\image4.jpg';
-import image5 from 'C:\\Users\\Sparta Laptop Store\\Desktop\\Nabeel\\nabeel\\src\\Assets\\image5.jpg';
+import image1 from '../Assets/image1.jpg';
+import image2 from '../Assets/image2.jpg';
+import image3 from '../Assets/image3.jpg';
+import image4 from '../Assets/image4.jpg';
+import image5 from '../Assets/image5.jpg';
 
 register();
 

@@ -17,7 +17,7 @@
 }
 
 .search-section {
-  background-image: url('C:\\Users\\Sparta Laptop Store\\Desktop\\Nabeel\\nabeel\\src\\Assets\\background1.jpg');
+  background-image: url('../Assets/background1.jpg');
   height: 30vh;
   display: flex;
   justify-content: center;
@@ -25,7 +25,7 @@
 }
 
 .content-section {
-  background-image: url('C:\\Users\\Sparta Laptop Store\\Desktop\\Nabeel\\nabeel\\src\\Assets\\background2.jpg');
+  background-image: url('../Assets/background2.jpg');
   height: 100vh;
   display: flex;
   gap: 5rem;

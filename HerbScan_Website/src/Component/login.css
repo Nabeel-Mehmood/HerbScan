@@ -2,7 +2,7 @@
 .login-container {
     display: flex;
     height: 100vh;
-    background-image: url('C:\\Users\\Sparta Laptop Store\\Desktop\\Nabeel\\nabeel\\src\\Assets\\Signup_bg.jpg'); /* Replace with your image path */
+    background-image: url('../Assets/Signup_bg.jpg'); /* Replace with your image path */
     background-size: cover;
     background-position: center;
     font-family: 'Arial', sans-serif;

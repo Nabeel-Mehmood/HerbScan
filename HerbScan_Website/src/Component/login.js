@@ -1,8 +1,8 @@
 import React, { useEffect } from 'react'; // Remove useState import
 import './login.css';
-import Logo from 'C:\\Users\\Sparta Laptop Store\\Desktop\\Nabeel\\nabeel\\src\\Assets\\logo.png';
-import SignupBg from 'C:\\Users\\Sparta Laptop Store\\Desktop\\Nabeel\\nabeel\\src\\Assets\\Signup_bg.jpg';
-import SignupRightBg from 'C:\\Users\\Sparta Laptop Store\\Desktop\\Nabeel\\nabeel\\src\\Assets\\Signup_rigjt_bg.jpg';
+import Logo from '../Assets/logo.png';
+import SignupBg from '../Assets/Signup_bg.jpg';
+import SignupRightBg from '../Assets/Signup_rigjt_bg.jpg';
 
 function Login() {
   useEffect(() => {
