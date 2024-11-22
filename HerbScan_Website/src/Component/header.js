@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import './header.css';
 import Logo from '../Assets/logo.png';
 
-function Header() {
+function Header({ showSearchBar = true }) {
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
@@ -21,13 +21,16 @@ function Header() {
         <img src={Logo} alt="Logo" className="logo" />
         {!isScrolled && <span className="logo-text">HerbScan</span>}
       </div>
-      <div className="search-bar-container">
-        <input type="text" placeholder="Search..." className="search-bar" />
-        <i className="search-icon fas fa-search"></i>
-      </div>
+
+      {showSearchBar && (
+        <div className="search-bar-container">
+          <input type="text" placeholder="Search..." className="search-bar" />
+          <i className="search-icon fas fa-search"></i>
+        </div>
+      )}
+
       <nav className="nav-bar">
         <ul className="nav-links">
-          {/* Use React Router Links for navigation */}
           <li><Link to="/">Home</Link></li>
           <li><Link to="/explore">Explore</Link></li>
           <li><Link to="/contact">Contact Us</Link></li>

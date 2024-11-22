@@ -1,9 +1,11 @@
 import React from 'react';
+import Header from '../Component/header'; // Import the Header component
 import './explore.css';
 
 function Explore() {
   return (
     <div className="explore-container">
+      <Header showSearchBar={false} /> {/* Hide the search bar */}
       <header className="explore-header">
         <h1>Explore the World of HerbScan</h1>
         <p>Discover insights, information, and opportunities to learn more about herbs and plants.</p>

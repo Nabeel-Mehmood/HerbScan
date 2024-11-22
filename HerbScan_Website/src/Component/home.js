@@ -62,7 +62,7 @@ function Home() {
 
   return (
     <div className="home-container">
-      <Header /> {/* Use the reusable Header component */}
+      <Header showSearchBar={true} /> {/* Explicitly show the search bar */}
 
       {/* Second Parallax Section */}
       <div className="parallax-section content-section">
