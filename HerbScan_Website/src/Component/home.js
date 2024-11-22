@@ -9,7 +9,7 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import { Autoplay } from 'swiper/modules';
 import { register } from 'swiper/element';
-import Logo from '../Assets/logo.png';
+import Header from '../Component/header'; // Import the Header component
 
 // Images for the slider
 import image1 from '../Assets/image1.jpg';
@@ -62,37 +62,7 @@ function Home() {
 
   return (
     <div className="home-container">
-      {/* Header Section */}
-      <header className={`header ${isScrolled ? 'scrolled' : ''}`}>
-        <div className="logo-container">
-          <img src={Logo} alt="Logo" className="logo" />
-          {!isScrolled && <span className="logo-text">HerbScan</span>}
-        </div>
-        <div className="search-bar-container">
-          <input type="text" placeholder="Search..." className="search-bar" />
-          <i className="search-icon fas fa-search"></i>
-        </div>
-        <nav className="nav-bar">
-          <ul className="nav-links">
-            <li><a href="/">Home</a></li>
-            <li><a href="/explore">Explore</a></li>
-            <li><a href="/contact">Contact Us</a></li>
-          </ul>
-          {!isScrolled && (
-            <button
-              className="signup-btn"
-              onClick={() => (window.location.href = '/login')}
-            >
-              Sign Up
-            </button>
-          )}
-        </nav>
-      </header>
-
-      {/* First Parallax Section
-      <div className="parallax-section search-section">
-        
-      </div> */}
+      <Header /> {/* Use the reusable Header component */}
 
       {/* Second Parallax Section */}
       <div className="parallax-section content-section">
