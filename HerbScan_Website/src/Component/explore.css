@@ -1,0 +1,68 @@
+/* Explore Page Styling */
+.explore-container {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    padding: 2rem;
+    text-align: center;
+  }
+  
+  .explore-header {
+    background: linear-gradient(90deg, #2E8B57, #e5ffe5);
+    color: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .explore-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .explore-header p {
+    font-size: 1.2rem;
+    margin-top: 0;
+  }
+  
+  .explore-content {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+  
+  .explore-card {
+    background: white;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .explore-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  }
+  
+  .explore-card h2 {
+    font-size: 1.5rem;
+    color: #2E8B57;
+  }
+  
+  .explore-card p {
+    margin-top: 0.5rem;
+    font-size: 1rem;
+    color: #555;
+  }
+  
+  .explore-footer {
+    margin-top: 3rem;
+    font-size: 0.9rem;
+    color: #666;
+  }
+  
