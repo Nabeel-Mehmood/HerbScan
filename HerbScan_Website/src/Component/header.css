@@ -1,143 +1,142 @@
 /* Advanced Sticky Header Styling */
 .header {
-    position: sticky; /* Sticky header */
-    top: 0;
-    z-index: 1000;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 2rem;
-    background: linear-gradient(90deg, #e5ffe5, #2E8B57); /* Gradient background */
-    color: white; /* White text for contrast */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
-    transition: all 0.3s ease; /* Smooth transitions */
+  position: sticky; /* Sticky header */
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: linear-gradient(90deg, #e5ffe5, #2E8B57); /* Gradient background */
+  color: white; /* White text for contrast */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+  transition: all 0.3s ease; /* Smooth transitions */
+}
+
+.header.scrolled {
+  background: linear-gradient(90deg, #cfe8cf, #006400); /* Darker gradient when scrolled */
+  padding: 0.7rem 1rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Enhanced shadow for focus */
+}
+
+/* Logo Styling */
+.logo {
+  width: 80px;
+  transition: all 0.3s ease;
+}
+
+.header.scrolled .logo {
+  width: 50px; /* Shrink logo size when scrolled */
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.logo-text {
+  margin-left: 10px; /* Space between logo and text */
+  font-size: 24px; /* Slightly larger font size */
+  font-weight: bold;
+  color: #4CAF50; /* Match the theme color */
+  font-family: 'Poppins', sans-serif; /* Use a modern, stylish font */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Add subtle text shadow */
+  letter-spacing: 1px; /* Slightly spaced letters for elegance */
+  opacity: 0; /* Initially hidden for animation */
+  animation: fadeInSlide 1s ease-in-out forwards; /* Animation applied */
+  transition: opacity 0.3s ease;
+}
+
+/* Keyframes for animation */
+@keyframes fadeInSlide {
+  0% {
+    opacity: 0;
+    transform: translateX(-20px); /* Slide in from the left */
   }
-  
-  .header.scrolled {
-    background: linear-gradient(90deg, #cfe8cf, #006400); /* Darker gradient when scrolled */
-    padding: 0.7rem 1rem;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Enhanced shadow for focus */
+  100% {
+    opacity: 1;
+    transform: translateX(0); /* End at normal position */
   }
-  
-  /* Logo Styling */
-  .logo {
-    width: 80px;
-    transition: all 0.3s ease;
-  }
-  
-  .header.scrolled .logo {
-    width: 50px; /* Shrink logo size when scrolled */
-  }
-  
-  .logo-container {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-  }
-  
-  .logo-text {
-    margin-left: 10px; /* Space between logo and text */
-    font-size: 24px; /* Slightly larger font size */
-    font-weight: bold;
-    color: #4CAF50; /* Match the theme color */
-    font-family: 'Poppins', sans-serif; /* Use a modern, stylish font */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Add subtle text shadow */
-    letter-spacing: 1px; /* Slightly spaced letters for elegance */
-    opacity: 0; /* Initially hidden for animation */
-    animation: fadeInSlide 1s ease-in-out forwards; /* Animation applied */
-    transition: opacity 0.3s ease;
-  }
-  
-  /* Keyframes for animation */
-  @keyframes fadeInSlide {
-    0% {
-      opacity: 0;
-      transform: translateX(-20px); /* Slide in from the left */
-    }
-    100% {
-      opacity: 1;
-      transform: translateX(0); /* End at normal position */
-    }
-  }
-  
-  .header.scrolled .logo-text {
-    opacity: 0; /* Hide text */
-  }
-  
-  /* Hover effect for additional interaction */
-  .logo-text:hover {
-    color: #45a049; /* Slightly darker green on hover */
-    transform: scale(1.1); /* Slight zoom-in effect */
-    transition: all 0.3s ease-in-out; /* Smooth transition */
-  }
-  
-  /* Navigation Bar */
-  .nav-bar {
-    display: flex;
-    align-items: center;
-  }
-  
+}
+
+.header.scrolled .logo-text {
+  opacity: 0; /* Hide text */
+}
+
+/* Hover effect for additional interaction */
+.logo-text:hover {
+  color: #45a049; /* Slightly darker green on hover */
+  transform: scale(1.1); /* Slight zoom-in effect */
+  transition: all 0.3s ease-in-out; /* Smooth transition */
+}
+
+/* Navigation Bar */
+.nav-bar {
+  display: flex;
+  align-items: center;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  font-size: 1.0rem;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #FFD700; /* Golden hover effect */
+  transform: scale(1.1); /* Slight zoom on hover */
+}
+
+/* Signup Button */
+.signup-btn {
+  margin-left: 2rem;
+  padding: 0.7rem 1.5rem;
+  background: #FFD700; /* Golden button */
+  color: #333; /* Dark text for contrast */
+  border: none;
+  border-radius: 25px; /* Fully rounded button */
+  font-weight: bold;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Subtle button shadow */
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.signup-btn:hover {
+  background: #FFC107; /* Lighter golden on hover */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4); /* Enhanced shadow */
+}
+
+.header.scrolled .signup-btn {
+  transform: scale(0.8); /* Shrink on scroll */
+  opacity: 0.8; /* Slightly fade on scroll */
+}
+
+/* Mobile Responsive Styling */
+@media (max-width: 768px) {
   .nav-links {
-    display: flex;
-    gap: 1.5rem;
-    list-style: none;
+    display: none; /* Hide links on smaller screens */
   }
-  
-  .nav-links a {
-    text-decoration: none;
-    color: white;
-    font-weight: 500;
-    font-size: 1.0rem;
-    transition: color 0.3s ease, transform 0.3s ease;
+
+  .nav-bar {
+    flex: 1;
+    justify-content: flex-end;
   }
-  
-  .nav-links a:hover {
-    color: #FFD700; /* Golden hover effect */
-    transform: scale(1.1); /* Slight zoom on hover */
+
+  .logo-container {
+    justify-content: space-between;
+    flex: 1;
   }
-  
-  /* Signup Button */
+
   .signup-btn {
-    margin-left: 2rem;
-    padding: 0.7rem 1.5rem;
-    background: #FFD700; /* Golden button */
-    color: #333; /* Dark text for contrast */
-    border: none;
-    border-radius: 25px; /* Fully rounded button */
-    font-weight: bold;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Subtle button shadow */
-    cursor: pointer;
-    transition: all 0.3s ease;
+    padding: 0.5rem 1rem;
   }
-  
-  .signup-btn:hover {
-    background: #FFC107; /* Lighter golden on hover */
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4); /* Enhanced shadow */
-  }
-  
-  .header.scrolled .signup-btn {
-    transform: scale(0.8); /* Shrink on scroll */
-    opacity: 0.8; /* Slightly fade on scroll */
-  }
-  
-  /* Mobile Responsive Styling */
-  @media (max-width: 768px) {
-    .nav-links {
-      display: none; /* Hide links on smaller screens */
-    }
-  
-    .nav-bar {
-      flex: 1;
-      justify-content: flex-end;
-    }
-  
-    .logo-container {
-      justify-content: space-between;
-      flex: 1;
-    }
-  
-    .signup-btn {
-      padding: 0.5rem 1rem;
-    }
-  }
-  
+}
