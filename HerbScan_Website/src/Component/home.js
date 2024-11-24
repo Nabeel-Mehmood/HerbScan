@@ -1,15 +1,13 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import './home.css';
 import './header.css';
-import './footer.css';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/autoplay';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
 import { Autoplay } from 'swiper/modules';
 import { register } from 'swiper/element';
 import Header from '../Component/header'; // Import the Header component
+import Footer from '../Component/footer'; // Import the Footer component
 
 // Images for the slider
 import image1 from '../Assets/image1.jpg';
@@ -21,18 +19,8 @@ import image5 from '../Assets/image5.jpg';
 register();
 
 function Home() {
-  const [isScrolled, setIsScrolled] = useState(false);
   const [uploadedImage, setUploadedImage] = useState(null);
   const [imageName, setImageName] = useState("");
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
 
   const handleFileChange = (e) => {
     const file = e.target.files[0];
@@ -62,9 +50,7 @@ function Home() {
 
   return (
     <div className="home-container">
-      <Header showSearchBar={true} /> {/* Explicitly show the search bar */}
-
-      {/* Second Parallax Section */}
+      <Header showSearchBar={true} />
       <div className="parallax-section content-section">
         {/* File Upload */}
         <div
@@ -113,8 +99,8 @@ function Home() {
           <Swiper
             modules={[Autoplay]}
             autoplay={{
-              delay: 3000, // Delay between slides in milliseconds
-              disableOnInteraction: false, // Prevent autoplay from stopping on user interaction
+              delay: 3000,
+              disableOnInteraction: false,
             }}
             spaceBetween={30}
             slidesPerView={1}
@@ -158,17 +144,7 @@ function Home() {
           </Swiper>
         </div>
       </div>
-
-      {/* Footer Section */}
-      <footer className="footer">
-        <p>&copy; 2024 HerbScan. All rights reserved.</p>
-        <ul className="footer-links">
-          <li><a href="/about">About Us</a></li>
-          <li><a href="/privacy">Privacy Policy</a></li>
-          <li><a href="/terms">Terms of Service</a></li>
-          <li><a href="/help">Help Center</a></li>
-        </ul>
-      </footer>
+      <Footer /> {/* Include the Footer component */}
     </div>
   );
 }
