@@ -113,6 +113,17 @@ justify-content: center; /* Centers content-section horizontally */
 }
 
 
+/* Upload Section */ .upload-section { 
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+  width: 100%; 
+  height: 100vh; 
+  background-image: url('../Assets/background2.jpg'); 
+  background-size: cover; 
+  background-attachment: fixed; 
+}
+
 
 /* File Upload */
 .file-upload {
@@ -237,10 +248,43 @@ justify-content: center; /* Centers content-section horizontally */
 }
 
 
+/* Info and Slider Section */ 
+.info-slider-section { 
+  display: flex; 
+  gap: 5rem; 
+  width: 100%; 
+  padding: 2rem; 
+  background: #ffffff; 
+  align-items: center; 
+  justify-content: space-around; 
+  text-align: center;
+}
+
+
+.website-info { 
+  flex: 1; 
+  /* max-width: 400px;  */
+}
+
+.website-info h2 { 
+  font-size: 28px; 
+  font-weight: bold; 
+  color: #333; 
+  margin-bottom: 1rem; 
+}
+
+.website-info p { 
+  font-size: 18px; 
+  line-height: 1.5; 
+  color: #666; 
+}
+
 
 /* Swiper Image Slider */
 .image-slider {
-  width: 600px; /* Increased width for better visibility */
+  flex: 1;
+  width: 100%; /* Increased width for better visibility */
+  max-width: 600px;
   height: 380px;
   position: relative; /* For positioning arrows and indicators */
   margin: auto; /* Center align */
@@ -248,7 +292,7 @@ justify-content: center; /* Centers content-section horizontally */
   align-items: center;
   background: linear-gradient(180deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.6));
   border-radius: 15px;
-  margin-right: 2rem;
+  margin-right: 5rem;
   overflow: hidden;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
 }
@@ -264,35 +308,6 @@ justify-content: center; /* Centers content-section horizontally */
 .image-slider img:hover {
   transform: scale(1.05); /* Zoom effect on hover */
   filter: brightness(1.2); /* Slightly brighten the image */
-}
-
-/* Arrows for Navigation */
-.swiper-button-next,
-.swiper-button-prev {
-  color: white; /* Ensure arrows are white */
-  background: rgba(0, 0, 0, 0.5);
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 1.2rem;
-  transition: background 0.3s ease;
-}
-
-/* .swiper-button-next:hover,
-.swiper-button-prev:hover {
-  background: rgba(0, 0, 0, 0.8);
-} */
-
-/* Positioning Navigation Buttons */
-.swiper-button-next {
-  right: 10px;
-}
-
-.swiper-button-prev {
-  left: 10px;
 }
 
 

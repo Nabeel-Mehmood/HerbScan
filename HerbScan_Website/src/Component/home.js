@@ -51,7 +51,7 @@ function Home() {
   return (
     <div className="home-container">
       <Header showSearchBar={true} />
-      <div className="parallax-section content-section">
+      <div className="upload-section">
         {/* File Upload */}
         <div
           className="file-upload"
@@ -92,6 +92,15 @@ function Home() {
               <p className="image-name">Image Name: {imageName}</p>
             </div>
           )}
+        </div>
+      </div>
+      <div className="info-slider-section content-section">
+        {/* Website Info */}
+        <div className="website-info">
+          <h2>About HerbScan</h2>
+          <p>
+            HerbScan helps you identify different trees by uploading images. Use our powerful tool to learn more about the flora around you.
+          </p>
         </div>
 
         {/* Image Slider */}
