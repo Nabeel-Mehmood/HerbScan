@@ -1,68 +1,267 @@
 /* Explore Page Styling */
 .explore-container {
-    font-family: 'Poppins', sans-serif;
-    background-color: #f9f9f9;
-    color: #333;
-    padding: 2rem;
-    text-align: center;
-  }
-  
-  .explore-header {
-    background: linear-gradient(90deg, #2E8B57, #e5ffe5);
-    color: white;
-    padding: 2rem;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  }
-  
-  .explore-header h1 {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-  }
-  
-  .explore-header p {
-    font-size: 1.2rem;
-    margin-top: 0;
-  }
-  
-  .explore-content {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 2rem;
-    margin-top: 2rem;
-  }
-  
-  .explore-card {
-    background: white;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    padding: 1.5rem;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 300px;
-    text-align: left;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-  
-  .explore-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-  }
-  
-  .explore-card h2 {
-    font-size: 1.5rem;
-    color: #2E8B57;
-  }
-  
-  .explore-card p {
-    margin-top: 0.5rem;
-    font-size: 1rem;
-    color: #555;
-  }
-  
-  .explore-footer {
-    margin-top: 3rem;
-    font-size: 0.9rem;
-    color: #666;
-  }
-  
+  font-family: 'Poppins', sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+  min-height: 100vh; /* Ensures full-screen height */
+  display: flex;
+  flex-direction: column;
+}
+
+/* Main content should take available space */
+.explore-main {
+  flex: 1;
+  padding: 2rem;
+  text-align: center;
+}
+
+.explore-header {
+  background: linear-gradient(90deg, #2E8B57, #e5ffe5);
+  color: white;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  margin-bottom: 2rem;
+}
+
+.explore-header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.explore-header p {
+  font-size: 1.2rem;
+  margin-top: 0;
+}
+
+.explore-content {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+
+/* Search Filter Section */
+.explore-search-filter {
+  padding: 2rem;
+  background: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  margin-bottom: 2rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.explore-search-filter:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.explore-search-filter h2 {
+  font-size: 1.8rem;
+  color: #2E8B57;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+}
+
+.filter-dropdowns {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.filter-group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.filter-select {
+  width: 220px;
+  padding: 0.7rem;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  background: #f9f9f9;
+  font-size: 1rem;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.filter-select:hover,
+.filter-select:focus {
+  border-color: #2E8B57;
+  box-shadow: 0 0 10px rgba(46, 139, 87, 0.2);
+}
+
+.filter-group label {
+  font-size: 0.9rem;
+  color: #555;
+  margin-bottom: 0.3rem;
+}
+
+/* Explore Search Section */
+.explore-search-section {
+  padding: 2rem;
+  background: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.explore-search-section:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.explore-search-section h2 {
+  font-size: 1.8rem;
+  color: #2E8B57;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+}
+
+.search-bar-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.search-bar-container {
+  flex-grow: 1;
+  max-width: 500px;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.search-bar {
+  width: 100%;
+  padding: 1rem 3rem 1rem 1rem;
+  font-size: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  background: #f8f8f8;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.search-bar:focus {
+  border: 1px solid #4CAF50;
+  box-shadow: 0 0 10px rgba(76, 175, 80, 0.2);
+}
+
+.search-icon {
+  position: absolute;
+  right: 12px;
+  font-size: 1.2rem;
+  color: #aaa;
+}
+
+.search-actions {
+  display: flex;
+  gap: 1rem;
+}
+
+.search-btn,
+.advanced-btn,
+.download-btn {
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  color: white;
+  background-color: #2E8B57;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+.search-btn:hover,
+.advanced-btn:hover,
+.download-btn:hover {
+  background-color: #256b47;
+  transform: scale(1.05);
+}
+
+.advanced-btn {
+  background-color: #ff8c00;
+}
+
+.advanced-btn:hover {
+  background-color: #e67e00;
+}
+
+/* Explore Result Filter Section */
+.explore-result-filter {
+  padding: 2rem;
+  background: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin-top: 2.5rem;
+}
+
+.explore-result-filter:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.explore-result-filter h2 {
+  font-size: 1.8rem;
+  color: #2E8B57;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+}
+
+.filter-dropdowns {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.filter-select {
+  width: 200px;
+  padding: 0.7rem;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  background: #f9f9f9;
+  font-size: 1rem;
+}
+
+
+
+
+/* Explore Cards */
+.explore-card {
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  text-align: left;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin-top: 2rem;
+}
+
+.explore-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.explore-card h2 {
+  font-size: 1.5rem;
+  color: #2E8B57;
+}
+
+.explore-card p {
+  margin-top: 0.5rem;
+  font-size: 1rem;
+  color: #555;
+}
